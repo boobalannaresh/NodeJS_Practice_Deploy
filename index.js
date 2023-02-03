@@ -5,10 +5,12 @@ import cors from "cors";
 
 
 dotenv.config();
+
 const app = express();
+app.use(cors())
 
 const PORT = process.env.PORT;  //// Auto Assign Port
-app.use(cors())
+
 //// Mongo Connection
 const MONGO_URL = process.env.MONGO_URL  
 //// mongodb+srv://username:<password>@databases.lyvnjh1.mongodb.net/?retryWrites=true&w=majority
