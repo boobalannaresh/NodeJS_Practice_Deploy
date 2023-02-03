@@ -1,13 +1,14 @@
 import express from "express";
 import { MongoClient } from "mongodb";
 import * as dotenv from "dotenv";
+import cors from "cors";
 
 
 dotenv.config();
 const app = express();
 
 const PORT = process.env.PORT;  //// Auto Assign Port
-
+app.use(cors())
 //// Mongo Connection
 const MONGO_URL = process.env.MONGO_URL  
 //// mongodb+srv://username:<password>@databases.lyvnjh1.mongodb.net/?retryWrites=true&w=majority
